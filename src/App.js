@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import { useWeb3Modal } from '@web3modal/ethers/react'
+import { useEffect } from 'react';
+import Nav from 'react-bootstrap/Nav';
+import { NavBar } from './components/NavBar';
 
 function App() {
+  const { open, close } = useWeb3Modal()
+  // useEffect(() => {
+  //   // console.log("switched to " + chain?.id);
+  // }, [chain?.id]);
   return (
+    <div>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <button onClick={() => open({ view: "Networks" })}>Send</button> */}
+      {/* <p>{chain?.name}</p> */}
     </div>
+    <NavBar/>
+    
+
+    </div>
+     
   );
 }
 
