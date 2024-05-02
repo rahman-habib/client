@@ -19,15 +19,15 @@ function HeroSection() {
                 <Button variant="indigo" size="lg" href="/signin">
                   {/* Sign In <i className="ms-2 fas fa-arrow-right"></i> */}
                   <>
-        <OffCanvas key={1} placement={"end"} name={"end"} />
-    </>
+                    <OffCanvas key={1} placement={"end"} name={"SignIn"} />
+                  </>
                 </Button>
               </div>
             </div>
           </Col>
           <Col md={12} lg={6}>
             <div className="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
-              <img src="./assets/hero.jpg" alt="Hero Image" className="img-fluid" />
+              <img src="./assets/" alt="Hero Image" className="img-fluid" />
             </div>
           </Col>
         </Row>
