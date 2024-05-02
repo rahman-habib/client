@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-
+import OffCanvas from './OffCanvas'
 function HeroSection() {
   return (
     <section className="px-2 py-32 bg-white md:px-0">
@@ -19,9 +19,7 @@ function HeroSection() {
                 <Button variant="indigo" size="lg" href="/signin">
                   {/* Sign In <i className="ms-2 fas fa-arrow-right"></i> */}
                   <>
-      {['start', 'end', 'top', 'bottom'].map((placement, idx) => (
-        <OffCanvasExample key={idx} placement={placement} name={placement} />
-      ))}
+        <OffCanvas key={1} placement={"end"} name={"end"} />
     </>
                 </Button>
               </div>
@@ -29,7 +27,7 @@ function HeroSection() {
           </Col>
           <Col md={12} lg={6}>
             <div className="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
-              <img src="/src/assets/hero.jpg" alt="Hero Image" className="img-fluid" />
+              <img src="./assets/hero.jpg" alt="Hero Image" className="img-fluid" />
             </div>
           </Col>
         </Row>

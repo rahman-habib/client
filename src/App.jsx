@@ -21,16 +21,14 @@ import HeroSection from './components/HeroSection';
 function App() {
   const { open, close } = useWeb3Modal()
   const { connect, connected } = useWeb3Modal();
-
-  // useEffect(() => {
-  //   // console.log("switched to " + chain?.id);
-  // }, [chain?.id]);
   return (
    
     <BrowserRouter>
     <div>
           <NavBar/>
-          <HeroSection/>
+    </div>
+    <div>
+    <HeroSection/>
 
     </div>
       <Routes>
