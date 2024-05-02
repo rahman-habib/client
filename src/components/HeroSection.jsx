@@ -27,7 +27,7 @@ function HeroSection() {
           </Col>
           <Col md={12} lg={6}>
             <div className="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
-              <img src="./assets/" alt="Hero Image" className="img-fluid" />
+              <img src="./assets/hero.jpg" alt="Hero Image" className="img-fluid" />
             </div>
           </Col>
         </Row>
