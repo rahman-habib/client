@@ -17,6 +17,8 @@ import {AddLand} from './components/AddLand';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeroSection from './components/HeroSection';
+import Verify from './components/Verify';
+import SignIn from './components/SignIn';
 
 function App() {
   const { open, close } = useWeb3Modal()
@@ -24,18 +26,18 @@ function App() {
   return (
    
     <BrowserRouter>
-    <div>
+    
           <NavBar/>
-    </div>
-    <div>
+    
+    {/* <div>
     <HeroSection/>
 
-    </div>
+    </div> */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/land-owner-registration" element={<LandOwnerReg />} />
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
-        <Route path="/register-land" element={<RegisterLand />} /> */}
+        <Route path="/" element={<HeroSection />} />
+        <Route path="/verify" element={<Verify />} />
+        <Route path="/signin" element={<SignIn />} />
+        {/* <Route path="/register-land" element={<RegisterLand />} /> */}
         {/* <Route
           path="/land-transfer"
           element={<LandOwnerShipTransfer />}

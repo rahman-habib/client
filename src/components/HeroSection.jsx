@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image';
+
 import OffCanvas from './OffCanvas'
 function HeroSection() {
   return (
@@ -16,7 +18,7 @@ function HeroSection() {
                 Securely verify, register and transfer land ownership with ease - Powered by Ethereum Smart Contract
               </p>
               <div className="relative flex flex-col sm:flex-row sm:space-x-4">
-                <Button variant="indigo" size="lg" href="/signin">
+                <Button variant="indigo" size="lg" href="">
                   {/* Sign In <i className="ms-2 fas fa-arrow-right"></i> */}
                   <>
                     <OffCanvas key={1} placement={"end"} name={"SignIn"} />
@@ -24,12 +26,16 @@ function HeroSection() {
                 </Button>
               </div>
             </div>
-          </Col>
-          <Col md={12} lg={6}>
             <div className="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
-              <img src="./assets/hero.jpg" alt="Hero Image" className="img-fluid" />
+              <img src='./assets/hero.jpg' alt="Hero Image" className="img-fluid" />
             </div>
           </Col>
+          <Col xs={6} md={4}>
+          <Image src="./assets/hero.jpg" rounded />
+        </Col>
+          {/* <Col md={12} lg={6}>
+            
+          </Col> */}
         </Row>
       </Container>
     </section>
