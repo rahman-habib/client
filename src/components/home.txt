@@ -1,0 +1,137 @@
+import React from "react";
+import { Container, Row, Col, Card,Carousel, Button } from "react-bootstrap";
+import { useWeb3Modal } from "@web3modal/ethers/react";
+import { ethers } from "ethers";
+import { useState,useEffect } from "react";
+import RegisterUser from "./RegisterUser";
+import AddLand from "./AddLand";
+function HomeComponent({ contract }) {
+  const { connect, connected } = useWeb3Modal();
+  const [isUserVerified, setIsUserVerified] = useState(false);
+  const [userAddress, setUserAddress] = useState(null);
+
+//   useEffect(() => {
+//     const checkUserVerification = async () => {
+//       if (connected && contract) {
+//         const verified = await contract.isUserVerified(connected.address);
+//         setIsUserVerified(verified);
+//         setUserAddress(connected.address);
+//       }
+//     };
+
+//     checkUserVerification();
+//   }, [connected, contract]);
+
+//   const handleConnect = async () => {
+//     try {
+//       const provider = await connect();
+//       setUserAddress(provider.getSigner().getAddress());
+//     } catch (error) {
+//       console.error("Connection error:", error);
+//     }
+//   };
+
+  return (
+    <Container fluid className="home">
+
+{/* <Container fluid className="home">
+      <Carousel fade>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.techtarget.com%2Fwhatis%2Ffeature%2F4-reasons-why-businesses-need-to-use-collaboration-tools&psig=AOvVaw2wiYbDUXz5fM8ScYbu005Q&ust=1714534529087000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNCyooaB6YUDFQAAAAAdAAAAABAE"
+            alt="Land Registry"
+          />
+          <Carousel.Caption>
+            <h3>Secure Land Registry</h3>
+            <p>
+              Buy, sell, and manage your land with confidence on the blockchain.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://www.google.com/imgres?q=land%20registry%20image%20for%20application%20background%201200%20x%20400&imgurl=https%3A%2F%2Fcdn.ttgtmedia.com%2Frms%2Fonlineimages%2FtoolGearArrow_g1157744678.jpg&imgrefurl=https%3A%2F%2Fwww.techtarget.com%2Fwhatis%2Ffeature%2F4-reasons-why-businesses-need-to-use-collaboration-tools&docid=ajr4DgmEfN7mbM&tbnid=VbpCAWD4xEKyAM&vet=12ahUKEwimz7D8gOmFAxWYhP0HHewLDGwQM3oECF0QAA..i&w=1200&h=400&hcb=2&ved=2ahUKEwimz7D8gOmFAxWYhP0HHewLDGwQM3oECF0QAA"
+            alt="Transparency"
+          />
+          <Carousel.Caption>
+            <h3>Transparent Transactions</h3>
+            <p>All details are recorded immutably on the blockchain.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+      </Container> */}
+
+
+
+      <Row className="justify-content-center align-items-center hero mt-5">
+        <Col md="auto">
+          <h1>Secure Land Registry on Blockchain</h1>
+          <p>
+            Effortlessly manage your land ownership with transparency and security.
+          </p>
+          {/* {connected ? (
+            isUserVerified ? (
+              <Button variant="primary" href="/land-registration">
+                Register Land
+              </Button>
+            ) : (
+              <p>Become a verified user to register land.</p>
+            )
+          ) : (
+            <Button variant="primary" onClick={handleConnect}>
+              Connect Wallet
+            </Button>
+          )} */}
+        </Col>
+      </Row>
+
+      <Row className="my-5">
+        <Col md={4}>
+          <Card>
+            <Card.Body>
+              <Card.Title>Enhanced Security</Card.Title>
+              <Card.Text>
+                Blockchain technology safeguards land records, minimizing fraud and
+                errors.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card>
+            <Card.Body>
+              <Card.Title>Streamlined Processes</Card.Title>
+              <Card.Text>
+                Experience faster land transactions with automated verification and
+                record keeping.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card>
+            <Card.Body>
+              <Card.Title>Improved Accessibility</Card.Title>
+              <Card.Text>
+                The blockchain offers a secure and accessible land registry
+                solution, even in regions with limited infrastructure.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      {/* Call to Action */}
+      <Row className="justify-content-center">
+        <Col md="auto">
+          <h2>Ready to revolutionize land management?</h2>
+        </Col>
+      </Row>
+    
+    </Container>
+  );
+}
+
+export default HomeComponent;

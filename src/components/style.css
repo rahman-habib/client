@@ -1,0 +1,7 @@
+.hero {
+    background-image: url("../assets/hero.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    min-height: 500px; /* Adjust height as needed */
+    color: #fff; /* Set text color to white */
+  }
